@@ -1,18 +1,24 @@
 name: Basic CI pipeline
+
 on:
   push:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     env:
-      NAME: Shibil Basith
+      NAME: "Shibil Basith"
+
     steps:
-      - name: Checkout code from github repository
+      - name: Checkout code from GitHub repository
         uses: actions/checkout@v4
-      - name: print current working directory
+
+      - name: Print current working directory
         run: pwd
-      - name: print my name
-        run: echo $NAME
-      - name: print passwords
-        run: echo ${{ secrets.PASSWORD }}
-      
+
+      - name: Print my name
+        run: echo "My name is $NAME"
+
+      - name: Print password
+        run: echo "${{ secrets.PASSWORD }}"
