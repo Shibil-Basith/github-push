@@ -14,5 +14,5 @@ jobs:
       - name: print my name
         run: echo $NAME
       - name: print passwords
-        run: echo {{ secrets.PASSWORD }}
+        run: echo ${{ secrets.PASSWORD }}
       
